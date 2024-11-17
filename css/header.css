@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1{
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8400ff;
+    color: rgb(255, 255, 255);
+    padding: 30px 20px;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    margin: 0 15px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-style: italic;
+}
+
+.cart-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.signature {
+    font-size: 0.9em;
+}
+
+.html:hover{
+    color: red;
+}
+
+.css:hover{
+    color: aqua;
+}
+
+.js:hover{
+    color: darkorange;
+}
