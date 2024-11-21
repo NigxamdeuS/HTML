@@ -39,7 +39,257 @@
         </nav>
     </header>
 <main>
-
+  <div id="particles-js"></div>
+  <div id="wrapper">
+    <h2>CSSプロパティ一覧と概要</h2>
+    <p class="mainp">CSSの基本プロパティを一覧形式でまとめました。テキストスタイル、背景、ボックスモデル、レイアウト、Flexbox、グリッド、アニメーション、レスポンシブデザインなど、Webデザインに欠かせないプロパティを網羅。初心者から中級者まで、スタイリングを効率よく学びたい方に最適な参考資料です。</p>
+    <table>
+      <h1>基本構造</h1>
+      <tr>
+        <td>*（全選択）、element（タグ名）、.class（クラス）、#id（ID）。</td>
+        <td>セレクタ: スタイルを適用する要素を指定。</td>
+      </tr>
+      <tr>
+        <td>color, font-size, background-color。</td>
+        <td>プロパティ: 要素の特性を定義。</td>
+      </tr>
+      <tr>
+        <td>red, 16px, #000000。</td>
+        <td>値: プロパティの設定内容。</td>
+      </tr>
+    </table>
+    <h1>テキストスタイル</h1>
+    <table>
+      <tr>
+        <td>color</td>
+        <td>テキストの色。</td>
+      </tr>
+      <tr>
+        <td>font-size</td>
+        <td>フォントサイズ。</td>
+      </tr>
+      <tr>
+        <td>font-family</td>
+        <td>フォントの種類。</td>
+      </tr>
+      <tr>
+        <td>font-weight</td>
+        <td> フォントの太さ（例: normal, bold, 100, 900）。</td>
+      </tr>
+      <tr>
+        <td>font-style</td>
+        <td>フォントのスタイル（例: normal, italic）。</td>
+      </tr>
+      <tr>
+        <td>text-align</td>
+        <td>テキストの位置揃え（例: left, center, right, justify）。</td>
+      </tr>
+      <tr>
+        <td>line-height</td>
+        <td>行間の調整。</td>
+      </tr>
+      <tr>
+        <td>letter-spacing</td>
+        <td>文字間のスペース。</td>
+      </tr>
+      <tr>
+        <td>text-decoration</td>
+        <td>テキストの装飾（例: none, underline, line-through）。</td>
+      </tr>
+      <tr>
+        <td>text-transform</td>
+        <td>テキストの変形（例: uppercase, lowercase, capitalize）。</td>
+      </tr>
+    </table>
+    <h1>背景と色</h1>
+    <table>
+      <tr>
+        <td>background-color</td>
+        <td> 背景色。</td>
+      </tr>
+      <tr>
+        <td>background-image</td>
+        <td>背景画像（例: url('image.jpg')）。</td>
+      </tr>
+      <tr>
+        <td>background-size</td>
+        <td> 背景画像のサイズ（例: cover, contain）。</td>
+      </tr>
+      <tr>
+        <td>background-repeat</td>
+        <td>背景画像の繰り返し（例: repeat, no-repeat）。</td>
+      </tr>
+      <tr>
+        <td>background-position</td>
+        <td> 背景の位置（例: center, top, bottom）。</td>
+      </tr>
+      <tr>
+        <td>opacity</td>
+        <td> 不透明度（値: 0 ～ 1）。</td>
+      </tr>
+    </table>
+    <h1>ボックスモデル</h1>
+      <p>外側</p>
+      <table>
+      <tr>
+        <td>margin</td>
+        <td>要素の外側の余白（例: 10px）。</td>
+      </tr>
+      <tr>
+        <td>margin-top, margin-right, margin-bottom, margin-left</td>
+        <td>個別の余白。</td>
+      </tr>
+    </table>
+      <p>内側</p>
+    <table>
+      <tr>
+        <td>padding</td>
+        <td> 内側の余白（例: 10px）。</td>
+      </tr>
+      <tr>
+        <td>padding-top, padding-right, padding-bottom, padding-left</td>
+        <td>個別の内側余白。</td>
+      </tr>
+    </table>
+      <p>サイズと枠線</p>
+    <table>
+      <tr>
+        <td>width</td>
+        <td>幅</td>
+      </tr>
+      <tr>
+        <td>height</td>
+        <td>高さ</td>
+      </tr>
+      <tr>
+        <td>max-width, min-width</td>
+        <td>幅の制限</td>
+      </tr>
+      <tr>
+        <td>max-height, min-height</td>
+        <td>高さの制限</td>
+      </tr>
+      <tr>
+        <td>border</td>
+        <td>枠線（例: 1px solid black）。</td>
+      </tr>
+      <tr>
+        <td>border-radius</td>
+        <td>角の丸み（例: 50% で円形）。</td>
+      </tr>
+    </table>
+    <h1>レイアウト</h1>
+    <table>
+      <tr>
+        <td>display</td>
+        <td>レイアウトの種類（例: block, inline, flex, grid, none）</td>
+      </tr>
+      <tr>
+        <td>position</td>
+        <td>要素の位置 例: static, relative, absolute, fixed, sticky）。</td>
+      </tr>
+      <tr>
+        <td>top, right, bottom, left</td>
+        <td>配置位置。</td>
+      </tr>
+      <tr>
+        <td>z-index</td>
+        <td>: 要素の重なり順。</td>
+      </tr>
+      <tr>
+        <td>overflow</td>
+        <td>コンテンツのはみ出し時の処理（例: visible, hidden, scroll, auto）。</td>
+      </tr>
+      <tr>
+        <td>float</td>
+        <td>要素を左または右に寄せる。</td>
+      </tr>
+      <tr>
+        <td>clear</td>
+        <td>フロートの解除。</td>
+      </tr>
+    </table>
+    <h1>Flexbox</h1>
+    <table>
+      <tr>
+        <td>display: flex</td>
+        <td>Flexboxを有効化。</td>
+      </tr>
+      <tr>
+        <td>justify-content</td>
+        <td>主軸方向の配置（例: flex-start, center, space-between）。</td>
+      </tr>
+      <tr>
+        <td>align-items</td>
+        <td>交差軸方向の配置（例: stretch, center）</td>
+      </tr>
+      <tr>
+        <td>flex-wrap</td>
+        <td>子要素の折り返し（例: nowrap, wrap）。</td>
+      </tr>
+      <tr>
+        <td>flex-direction</td>
+        <td>配置方向（例: row, column）。</td>
+      </tr>
+      <tr>
+        <td>gap</td>
+        <td>子要素間のスペース。</td>
+      </tr>
+    </table>
+    <h1>グリッドレイアウト</h1>
+    <table>
+      <tr>
+        <td>display: grid</td>
+        <td>グリッドを有効化。</td>
+      </tr>
+      <tr>
+        <td>grid-template-columns</td>
+        <td>列のサイズを指定（例: 1fr 2fr）。</td>
+      </tr>
+      <tr>
+        <td>grid-template-rows</td>
+        <td> 行のサイズを指定（例: 100px auto）。</td>
+      </tr>
+      <tr>
+        <td>gap</td>
+        <td> グリッド間のスペース。</td>
+      </tr>
+    </table>
+    <h1>アニメーションとトランジション</h1>
+    <table>
+      <tr>
+        <td>transition</td>
+        <td>プロパティの変化を指定（例: all 0.3s ease）。</td>
+      </tr>
+      <tr>
+        <td>animation</td>
+        <td>アニメーションを定義（例: animation: fadeIn 2s infinite）。</td>
+      </tr>
+      <tr>
+        <td>@keyframes</td>
+        <td>アニメーションの定義。</td>
+      </tr>
+    </table>
+    <h1>レスポンシブデザイン</h1>
+    <table>
+      <tr>
+        <td>@media</td>
+        <td>メディアクエリを使用（例: @media (max-width: 768px) { ... }）。</td>
+      </tr>
+      <tr>
+        <td>width: 100%</td>
+        <td>幅を親要素に合わせる。</td>
+      </tr>
+      <tr>
+        <td>max-width</td>
+        <td>最大幅を制限。</td>
+      </tr>
+      <tr>
+        <td>vh, vw</td>
+        <td>ビューポートの高さ・幅の割合。</td>
+      </tr>
+    </div>
+    </table>
 </main>
 <footer>
     <div class="footer-links">
