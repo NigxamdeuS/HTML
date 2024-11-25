@@ -42,6 +42,22 @@
     <div id="particles-js"></div>
     <div id="wrapper">
     <h2>テンプレートを使いこなそう！</h2>
+<section id="concept">
+    <h1>Concept</h1>
+<div class="concept-area">
+<div  class="mainimg" >
+    <img src="images/main.png" alt="プログラム紹介写真">
+</div>
+    <ul class="mainul">
+        <li>コーディングスキルが身につく</li>
+        <li>個性を大切に！</li>
+        <li>考える力を伸ばす！</li>
+        <li>苦手意識を克服！</li>
+        <li>言語を使いこなせる！</li>
+        <li>就活を有利に！</li>
+    </ul>
+</div>
+</section>
     <section class="service-section">
         <div class="services-container fadeUpTrigger">
             <div class="service-card">
@@ -95,4 +111,14 @@
 <script src="js/fadeUpTrigger.js"></script>
 <script src="js/particles.js"></script>
 <script src="js/kirikae.js"></script>
+<script>
+    (function(d) {
+      var config = {
+        kitId: 'hbo2nve',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
 </html>

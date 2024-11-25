@@ -3,17 +3,26 @@ body {
     font-family: Arial, sans-serif;
 }
 
+img {
+    overflow: hidden;
+}
+
 p{
     text-align: center;
 }
 
 h1{
     text-align: center;
-    font-family: 'Space Mono', monospace;
+    font-family: fot-tsukuardgothic-std, sans-serif;
+    font-weight: 700;
+    font-style: normal;
     font-size: 20px;
 }
 
 h2{
+    font-family: fot-tsukuardgothic-std, sans-serif;
+    font-weight: 700;
+    font-style: normal;
     text-align: center;
     font-size: 5vw; 
     margin: 0%;
@@ -24,6 +33,10 @@ h2{
 a{
     text-decoration: none;
     color: rgb(255, 255, 255);
+}
+
+ul{
+    margin: 0;
 }
 
 .service-section {
@@ -118,3 +131,69 @@ tr:nth-child(odd){
 tr:nth-child(even) {
     background-color: #f1f1f1;
 }
+
+#concept img {
+    width: 400px;
+    height: auto;
+    max-width: 80%; 
+    border-radius: 50%;
+}
+
+#concept .concept-area {
+    position: relative;
+    padding: 80px 0;
+}
+
+#concept .concept-area ul li {
+    position: absolute;
+}
+
+.mainimg{
+    text-align: center;
+    margin: 70px;
+    
+}
+
+.mainul li {
+    list-style: none;
+    font-family: fot-tsukuardgothic-std, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.mainul li:nth-child(1){
+    top: 12%;
+    left: 17%;
+    transform: rotate(15deg);
+}
+
+.mainul li:nth-child(2){
+    top: 37%;
+    left: 10%;
+    transform: rotate(10deg);
+}
+
+.mainul li:nth-child(3){
+    top: 65%;
+    left: 12%;
+    transform: rotate(-15deg);
+}
+
+.mainul li:nth-child(4){
+    top: 12%;
+    right:17% ;
+    transform: rotate(-15deg);
+}
+
+.mainul li:nth-child(5){
+    top: 37%;
+    right: 10%;
+    transform: rotate(-10deg);
+}
+
+.mainul li:nth-child(6){
+    top: 65%;
+    right:12%;
+    transform: rotate(15deg);
+}
+
