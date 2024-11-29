@@ -37,6 +37,7 @@ a{
 
 ul{
     margin: 0;
+    padding: 0;
 }
 
 .service-section {
@@ -146,6 +147,36 @@ tr:nth-child(even) {
 
 #concept .concept-area ul li {
     position: absolute;
+}
+
+@media (max-width: 880px) {
+    #concept .concept-area ul li{
+    position: static;
+    text-align: center;
+    }
+    .mainul li:nth-child(1){
+        transform:none !important;
+    }
+    
+    .mainul li:nth-child(2){
+        transform: none !important;
+    }
+    
+    .mainul li:nth-child(3){
+        transform:none !important;
+    }
+    
+    .mainul li:nth-child(4){
+        transform:none !important;
+    }
+    
+    .mainul li:nth-child(5){
+        transform:none !important;
+    }
+    
+    .mainul li:nth-child(6){
+        transform: none !important;
+    }
 }
 
 .mainimg{
