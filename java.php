@@ -41,134 +41,134 @@
 <main>
 <div id="particles-js"></div>
 <div id="wrapper">
-  <h2>HTMLタグ一覧と概要</h2>
-  <p class="mainp">HTMLで使用される主なタグをカテゴリ別に整理した一覧です。基本的なページ構造を作るためのタグから、テキスト装飾、リスト、リンク、メディア埋め込み、フォーム作成、テーブル作成など、多岐にわたる要素を網羅しています。それぞれのタグの役割と用途が簡潔にまとめられており、初心者から中級者まで幅広いレベルの開発者に役立つ資料です。</p>  
-<h1>基本タグ</h1>
+  <h2>PHPの関数の一覧と概要</h2>
+  <p class="mainp">PHPで使用される主な関数をカテゴリ別に整理した一覧です。基本的な関数から、データベース操作、ファイル操作、セキュリティ、エラー処理など、多岐にわたる関数を網羅しています。それぞれの関数の役割と用途が簡潔にまとめられており、初心者から中級者まで幅広いレベルの開発者に役立つ資料です。</p>  
+<h1>基本関数</h1>
 <table>
 <tr>
-  <td>!DOCTYPE html</td>
-  <td>ドキュメントタイプを宣言。</td>
+  <td>print</td>
+  <td>テキストを出力。</td>
 </tr>
 <tr>
-  <td>html</td>
-  <td>HTMLドキュメント全体を囲むルート要素。</td>
+  <td>echo</td>
+  <td>テキストを出力。</td>
 </tr>
 <tr>
-  <td>head</td>
-  <td>メタデータを定義（タイトルやCSS、スクリプトのリンクなど）。</td>
+  <td>var_dump</td>
+  <td>変数の型と値を出力。</td>
 </tr>
 <tr>
-  <td>title</td>
-  <td> ページタイトルを設定。</td>
+  <td>print_r</td>
+  <td> 配列の内容を出力。</td>
 </tr>
 <tr>
-<td>meta</td>
-<td>メタ情報を指定（文字セット、ビューポートなど）。</td>
+<td>print_r</td>
+<td> 配列の内容を出力。</td>
 </tr>
 <tr>
-<td>link</td>
-<td>外部リソース（CSSなど）をリンク。</td>
+<td>var_export</td>
+<td> 変数の内容を出力。</td>
 </tr>
 <tr>
-<td>style</td>
-<td>ページ内にCSSを記述。</td>
+<td>var_export</td>
+<td> 変数の内容を出力。</td>
 </tr>
 <tr>
-<td>script</td>
-<td>ページ内にJavaScriptを記述または外部スクリプトをリンク。</td>
+<td>var_export</td>
+<td> 変数の内容を出力。</td>
 </tr>
 </table>
-<h1>ページ構造</h1>
+<h1>データ型</h1>
 <table>
 <tr>
-  <td>body</td>
-  <td>ページの主要な内容を囲む。</td>
+  <td>string</td>
+  <td>文字列。</td>
 </tr>
 <tr>
-  <td>header</td>
-  <td>ページやセクションのヘッダー。</td>
+  <td>int</td>
+  <td>整数。</td>
 </tr>
 <tr>
-  <td>footer</td>
-  <td>ページやセクションのフッター。</td>
+  <td>float</td>
+  <td>浮動小数点数。</td>
 </tr>
 <tr>
-  <td>nav</td>
-  <td>ナビゲーションリンクを囲む。</td>
+  <td>bool</td>
+  <td>論理値。</td>
 </tr>
 <tr>
-  <td>main</td>
-  <td>主要なコンテンツ領域。</td>
+  <td>array</td>
+  <td>配列。</td>
 </tr>
 <tr>
-  <td>section</td>
-  <td>セクションを定義。</td>
+  <td>object</td>
+  <td>オブジェクト。</td>
 </tr>
 <tr>
-  <td>article</td>
-  <td>独立した記事やコンテンツ。</td>
+  <td>null</td>
+  <td>null。</td>
 </tr>
 <tr>
-  <td>aside</td>
-  <td>補足的な情報。</td>
+  <td>resource</td>
+  <td>リソース。</td>
 </tr>
 <tr>
-  <td>div</td>
-  <td>ブロックレベルの汎用コンテナー。</td>
+  <td>callable</td>
+  <td>コールバック関数。</td>
 </tr>
 </table>
-<h1>テキスト関連</h1>
+<h1>データベース関数</h1>
 <table>
 <tr>
-  <td>h1～h6</td>
-  <td>見出しレベルを指定。</td>
+  <td>mysqli_connect</td>
+  <td>データベース接続を確立。</td>
 </tr>
 <tr>
-  <td>p</td>
-  <td>段落を定義。</td>
+  <td>mysqli_query</td>
+  <td>データベースクエリを実行。</td>
 </tr>
 <tr>
-  <td>span</td>
-  <td>インライン要素の汎用コンテナー。</td>
+  <td>mysqli_fetch_assoc</td>
+  <td>結果セットから次の行を取得。</td>
 </tr>
 <tr>
-  <td>br</td>
-  <td> 改行。</td>
+  <td>mysqli_close</td>
+  <td> データベース接続を閉じる。</td>
 </tr>
 <tr>
-  <td>hr</td>
-  <td>水平線（区切り線）。</td>
+  <td>mysqli_error</td>
+  <td>直近のエラーメッセージを取得。</td>
 </tr>
 <tr>
-  <td>strong</td>
-  <td>強調（太字）。</td>
+  <td>mysqli_num_rows</td>
+  <td>結果セットの行数を取得。</td>
 </tr>
 <tr>
-  <td>em</td>
-  <td> 強調（斜体）。</td>
+  <td>mysqli_fetch_array</td>
+  <td>結果セットから次の行を取得。</td>
 </tr>
 <tr>
-  <td>b</td>
-  <td> 太字（強調なし）。</td>
+  <td>mysqli_fetch_object</td>
+  <td>結果セットから次の行を取得。</td>
 </tr>
 <tr>
-  <td>i</td>
-  <td>斜体（強調なし）。</td>
+  <td>mysqli_fetch_row</td>
+  <td>結果セットから次の行を取得。</td>
 </tr>
 <tr>
-  <td>u</td>
-  <td>下線。</td>
+  <td>mysqli_free_result</td>
+  <td>結果セットを解放。</td>
 </tr>
 <tr>
-  <td>mark</td>
-  <td>ハイライト表示。</td>
+  <td>mysqli_real_escape_string</td>
+  <td>SQLインジェクション対策のための文字列をエスケープ。</td>
 </tr>
 <tr>
-  <td>small</td>
-  <td>小さい文字。</td>
+  <td>mysqli_select_db</td>
+  <td>データベースを選択。</td>
 </tr>
 </table>
-<h1>リスト</h1>
+<h1>ファイル操作関数</h1>
 <table>
 <tr>
   <td>ul</td>

@@ -14,14 +14,14 @@
 <body>
     <header class="header">
         <div class="logo">
-            <span><a href="index.html"><h1>二グのテンプレ屋さん</h1></a></span>
+            <span><a href="index.php"><h1>二グのテンプレ屋さん</h1></a></span>
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a class="html" href="html.html">HTML</a></li>
-                <li><a class="css" href="css.html">CSS</a></li>
-                <li><a class="js" href="js.html">Javascript</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a class="html" href="html.php">HTML</a></li>
+                <li><a class="css" href="css.php">CSS</a></li>
+                <li><a class="js" href="js.php">Javascript</a></li>
             </ul>
         </nav>
         <div class="signature">
@@ -31,9 +31,9 @@
         <nav id="g-nav">
             <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
                 <ul>
-                    <li><a class="html" href="html.html">HTML</a></li>
-                    <li><a class="css" href="css.html">CSS</a></li>
-                    <li><a class="js" href="js.html">Javascript</a></li>
+                    <li><a class="html" href="html.php">HTML</a></li>
+                    <li><a class="css" href="css.php">CSS</a></li>
+                    <li><a class="js" href="js.php">Javascript</a></li>
                 </ul>
             </div>
         </nav>
@@ -79,13 +79,92 @@
         無料テンプレートや手頃な価格の有料テンプレートも数多く存在し、コストを抑えつつプロフェッショナルなデザインを採用できます。また、カスタマイズ性に優れているため、自分のプロジェクトに合わせて配色や構成を調整し、独自のウェブサイトを作ることも可能です。
         テンプレートを使えば、クライアントへのデモ作成も素早く行え、完成形を具体的にイメージさせることでスムーズなプロジェクト進行が期待できます。テンプレートはウェブ制作の強力なサポートツールとして、初心者から上級者まで幅広く活用できる便利な存在です。</p>
     <!--/wrapper--></div>
-</main>
+<!-- PHPで作成したアナログ時計 -->
+<section class="clock-container">
+                <h2 class="clock-title">現在時刻</h2>
+                <?php
+                // タイムゾーンを東京に設定
+                $now = new DateTime('now', new DateTimeZone('Asia/Tokyo'));
+                
+                // 時、分、秒を取得
+                $hour = intval($now->format('G'));
+                $minute = intval($now->format('i'));
+                $second = intval($now->format('s'));
+
+                // 時計の針の角度を計算
+                // 時針: 30度ずつ移動（1時間 = 30度）+ 分による微調整
+                $hourAngle = ($hour % 12) * 30 + ($minute / 60) * 30;
+                // 分針: 6度ずつ移動（1分 = 6度）
+                $minuteAngle = $minute * 6;
+                // 秒針: 6度ずつ移動（1秒 = 6度）
+                $secondAngle = $second * 6;
+                ?>
+                
+                <!-- SVGで時計を描画 -->
+                <svg class="clock-svg" width="200" height="200" viewBox="0 0 100 100">
+                    <!-- 時計の外枠 -->
+                    <circle cx="50" cy="50" r="45" fill="white" stroke="#2c3e50" stroke-width="2"/>
+                    
+                    <!-- 時間の目盛りを描画 -->
+                    <?php for($i = 0; $i < 12; $i++):
+                        // 30度ずつ回転（360度 ÷ 12 = 30度）
+                        $angle = $i * 30;
+                        // 角度をラジアンに変換（-90度して12時の位置を調整）
+                        $rad = deg2rad($angle - 90);
+                        // 目盛りの開始位置と終了位置を計算
+                        $x1 = 50 + 40 * cos($rad);
+                        $y1 = 50 + 40 * sin($rad);
+                        $x2 = 50 + 45 * cos($rad);
+                        $y2 = 50 + 45 * sin($rad);
+                    ?>
+                    <line class="clock-mark" 
+                          x1="<?= $x1 ?>" y1="<?= $y1 ?>" 
+                          x2="<?= $x2 ?>" y2="<?= $y2 ?>" />
+                    <?php endfor; ?>
+
+                    <!-- 時針を描画 -->
+                    <?php
+                    $hourRad = deg2rad($hourAngle - 90);
+                    $hourX = 50 + 25 * cos($hourRad);
+                    $hourY = 50 + 25 * sin($hourRad);
+                    ?>
+                    <line class="hour-hand" 
+                          x1="50" y1="50" 
+                          x2="<?= $hourX ?>" y2="<?= $hourY ?>" />
+
+                    <!-- 分針を描画 -->
+                    <?php
+                    $minRad = deg2rad($minuteAngle - 90);
+                    $minX = 50 + 35 * cos($minRad);
+                    $minY = 50 + 35 * sin($minRad);
+                    ?>
+                    <line class="minute-hand" 
+                          x1="50" y1="50" 
+                          x2="<?= $minX ?>" y2="<?= $minY ?>" />
+
+                    <!-- 秒針を描画 -->
+                    <?php
+                    $secRad = deg2rad($secondAngle - 90);
+                    $secX = 50 + 40 * cos($secRad);
+                    $secY = 50 + 40 * sin($secRad);
+                    ?>
+                    <line class="second-hand" 
+                          x1="50" y1="50" 
+                          x2="<?= $secX ?>" y2="<?= $secY ?>" />
+
+                    <!-- 時計の中心点 -->
+                    <circle class="clock-center" cx="50" cy="50" r="2"/>
+                </svg>
+                <p class="clock-note">※ページを更新すると現在時刻に更新をする</p>
+            </section>
+        </div>
+    </main>
 <footer>
     <div class="footer-links">
       <div>
-        <a href="html.html">HTML</a>
-        <a href="css.html">CSS</a>
-        <a href="js.html">Javascript</a>
+        <a href="html.php">HTML</a>
+        <a href="css.php">CSS</a>
+        <a href="js.php">Javascript</a>
       </div>
       <div>
         <a href="https://github.com/NigxamdeuS">その他のポートフォリオはこちらから</a>
