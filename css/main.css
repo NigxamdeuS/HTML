@@ -26,13 +26,13 @@ h2{
     text-align: center;
     font-size: 5vw; 
     margin: 0%;
-    padding-top: 20vw;
+    padding-top: 400px;
     padding-bottom: 20vw;
 }
 
 @media (max-width: 767px) {
     h2 {
-        padding-top: 35vw;
+        padding-top: 250px;
         font-size: 6vw;
     }
 }
@@ -188,8 +188,7 @@ tr:nth-child(even) {
 
 .mainimg{
     text-align: center;
-    margin: 70px;
-    
+    margin: 5vw;
 }
 
 .mainul li {
